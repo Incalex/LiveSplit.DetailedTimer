@@ -99,6 +99,8 @@
             this.chkHideComparison = new System.Windows.Forms.CheckBox();
             this.cmbComparison2 = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cmbTimingMethod = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
@@ -134,25 +136,28 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.btnColor2, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label11, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnColor1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.cmbGradientType, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox9, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.trkSegmentTimerRatio, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lblSize, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.trkSize, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox3, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox7, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox8, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox10, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox11, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cmbTimingMethod, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label14, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnColor2, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label11, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnColor1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cmbGradientType, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox9, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.trkSegmentTimerRatio, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lblSize, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.trkSize, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox3, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox7, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox8, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox10, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox11, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(7, 7);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 10;
+            this.tableLayoutPanel1.RowCount = 11;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 112F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
@@ -164,7 +169,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 82F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 112F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(445, 924);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(445, 953);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // btnColor2
@@ -173,7 +178,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnColor2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnColor2.Location = new System.Drawing.Point(185, 3);
+            this.btnColor2.Location = new System.Drawing.Point(185, 32);
             this.btnColor2.Name = "btnColor2";
             this.btnColor2.Size = new System.Drawing.Size(23, 23);
             this.btnColor2.TabIndex = 1;
@@ -184,7 +189,7 @@
             // 
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 8);
+            this.label11.Location = new System.Drawing.Point(3, 37);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(147, 13);
             this.label11.TabIndex = 22;
@@ -196,7 +201,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnColor1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnColor1.Location = new System.Drawing.Point(156, 3);
+            this.btnColor1.Location = new System.Drawing.Point(156, 32);
             this.btnColor1.Name = "btnColor1";
             this.btnColor1.Size = new System.Drawing.Size(23, 23);
             this.btnColor1.TabIndex = 0;
@@ -212,7 +217,7 @@
             "Plain",
             "Vertical",
             "Horizontal"});
-            this.cmbGradientType.Location = new System.Drawing.Point(214, 4);
+            this.cmbGradientType.Location = new System.Drawing.Point(214, 33);
             this.cmbGradientType.Name = "cmbGradientType";
             this.cmbGradientType.Size = new System.Drawing.Size(228, 21);
             this.cmbGradientType.TabIndex = 2;
@@ -222,7 +227,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.groupBox9, 6);
             this.groupBox9.Controls.Add(this.tableLayoutPanel10);
             this.groupBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox9.Location = new System.Drawing.Point(3, 734);
+            this.groupBox9.Location = new System.Drawing.Point(3, 763);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(439, 76);
             this.groupBox9.TabIndex = 10;
@@ -283,7 +288,7 @@
             // trkSegmentTimerRatio
             // 
             this.trkSegmentTimerRatio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.trkSegmentTimerRatio.Location = new System.Drawing.Point(214, 173);
+            this.trkSegmentTimerRatio.Location = new System.Drawing.Point(214, 202);
             this.trkSegmentTimerRatio.Maximum = 90;
             this.trkSegmentTimerRatio.Minimum = 10;
             this.trkSegmentTimerRatio.Name = "trkSegmentTimerRatio";
@@ -297,7 +302,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.groupBox1, 4);
             this.groupBox1.Controls.Add(this.tableLayoutPanel2);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(3, 202);
+            this.groupBox1.Location = new System.Drawing.Point(3, 231);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(439, 178);
             this.groupBox1.TabIndex = 6;
@@ -468,7 +473,7 @@
             // 
             this.lblSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSize.AutoSize = true;
-            this.lblSize.Location = new System.Drawing.Point(3, 149);
+            this.lblSize.Location = new System.Drawing.Point(3, 178);
             this.lblSize.Name = "lblSize";
             this.lblSize.Size = new System.Drawing.Size(147, 13);
             this.lblSize.TabIndex = 1;
@@ -477,7 +482,7 @@
             // trkSize
             // 
             this.trkSize.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.trkSize.Location = new System.Drawing.Point(214, 144);
+            this.trkSize.Location = new System.Drawing.Point(214, 173);
             this.trkSize.Name = "trkSize";
             this.trkSize.Size = new System.Drawing.Size(228, 23);
             this.trkSize.TabIndex = 4;
@@ -488,7 +493,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.groupBox3, 4);
             this.groupBox3.Controls.Add(this.tableLayoutPanel4);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(3, 386);
+            this.groupBox3.Location = new System.Drawing.Point(3, 415);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(439, 124);
             this.groupBox3.TabIndex = 7;
@@ -618,7 +623,7 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 178);
+            this.label5.Location = new System.Drawing.Point(3, 207);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(147, 13);
             this.label5.TabIndex = 17;
@@ -629,7 +634,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.groupBox7, 4);
             this.groupBox7.Controls.Add(this.tableLayoutPanel8);
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox7.Location = new System.Drawing.Point(3, 516);
+            this.groupBox7.Location = new System.Drawing.Point(3, 545);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(439, 78);
             this.groupBox7.TabIndex = 8;
@@ -714,7 +719,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.groupBox8, 4);
             this.groupBox8.Controls.Add(this.tableLayoutPanel9);
             this.groupBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox8.Location = new System.Drawing.Point(3, 600);
+            this.groupBox8.Location = new System.Drawing.Point(3, 629);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(439, 128);
             this.groupBox8.TabIndex = 9;
@@ -867,7 +872,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.groupBox10, 4);
             this.groupBox10.Controls.Add(this.tableLayoutPanel11);
             this.groupBox10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox10.Location = new System.Drawing.Point(3, 816);
+            this.groupBox10.Location = new System.Drawing.Point(3, 845);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(439, 106);
             this.groupBox10.TabIndex = 11;
@@ -967,7 +972,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.groupBox11, 4);
             this.groupBox11.Controls.Add(this.tableLayoutPanel12);
             this.groupBox11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox11.Location = new System.Drawing.Point(3, 32);
+            this.groupBox11.Location = new System.Drawing.Point(3, 61);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(439, 106);
             this.groupBox11.TabIndex = 3;
@@ -991,6 +996,7 @@
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel12.Size = new System.Drawing.Size(433, 87);
             this.tableLayoutPanel12.TabIndex = 0;
             // 
@@ -1046,6 +1052,30 @@
             this.label13.TabIndex = 3;
             this.label13.Text = "Comparison 2:";
             // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 8);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(147, 13);
+            this.label14.TabIndex = 23;
+            this.label14.Text = "Timing Method:";
+            // 
+            // cmbTimingMethod
+            // 
+            this.cmbTimingMethod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbTimingMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTimingMethod.FormattingEnabled = true;
+            this.cmbTimingMethod.Items.AddRange(new object[] {
+            "Current Timing Method",
+            "Real Time",
+            "Game Time"});
+            this.cmbTimingMethod.Location = new System.Drawing.Point(214, 4);
+            this.cmbTimingMethod.Name = "cmbTimingMethod";
+            this.cmbTimingMethod.Size = new System.Drawing.Size(228, 21);
+            this.cmbTimingMethod.TabIndex = 5;
+            // 
             // DetailedTimerSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1053,7 +1083,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "DetailedTimerSettings";
             this.Padding = new System.Windows.Forms.Padding(7);
-            this.Size = new System.Drawing.Size(459, 938);
+            this.Size = new System.Drawing.Size(459, 967);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.groupBox9.ResumeLayout(false);
@@ -1169,5 +1199,7 @@
         private System.Windows.Forms.ComboBox cmbComparison2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.CheckBox chkHideComparison;
+        private System.Windows.Forms.ComboBox cmbTimingMethod;
+        private System.Windows.Forms.Label label14;
     }
 }

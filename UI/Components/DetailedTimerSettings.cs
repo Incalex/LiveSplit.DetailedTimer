@@ -65,6 +65,7 @@ namespace LiveSplit.UI.Components
         public String Comparison { get; set; }
         public String Comparison2 { get; set; }
         public bool HideComparison { get; set; }
+        public String TimingMethod { get; set; }
 
         public LayoutMode Mode { get; set; }
 
@@ -105,6 +106,7 @@ namespace LiveSplit.UI.Components
             Comparison = "Current Comparison";
             Comparison2 = "Best Segments";
             HideComparison = false;
+            TimingMethod = "Current Timing Method";
 
             chkShowGradientSegmentTimer.DataBindings.Add("Checked", this, "SegmentTimerShowGradient", false, DataSourceUpdateMode.OnPropertyChanged);
             chkShowGradientTimer.DataBindings.Add("Checked", this, "TimerShowGradient", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -143,7 +145,15 @@ namespace LiveSplit.UI.Components
             chkDisplayIcon.CheckedChanged += chkDisplayIcon_CheckedChanged;
             chkSplitName.CheckedChanged += chkSplitName_CheckedChanged;
 
+            cmbTimingMethod.DataBindings.Add("SelectedItem", this, "TimingMethod", false, DataSourceUpdateMode.OnPropertyChanged);
+            cmbTimingMethod.SelectedIndexChanged += cmbTimingMethod_SelectedIndexChanged;
+
             this.Load += DetailedTimerSettings_Load;
+        }
+
+        void cmbTimingMethod_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TimingMethod = cmbTimingMethod.SelectedItem.ToString();
         }
 
         void chkSplitName_CheckedChanged(object sender, EventArgs e)
@@ -285,6 +295,14 @@ namespace LiveSplit.UI.Components
             TimerAccuracy = ParseEnum<TimeAccuracy>(element["TimerAccuracy"]);
             SegmentTimerAccuracy = ParseEnum<TimeAccuracy>(element["SegmentTimerAccuracy"]);
             SegmentTimesAccuracy = ParseEnum<TimeAccuracy>(element["SegmentTimesAccuracy"]);
+            if (version >= new Version(1, 4))
+            {
+                TimingMethod = element["TimingMethod"].InnerText;
+            }
+            else
+            {
+                TimingMethod = "Current Timing Method";
+            }
             if (version >= new Version(1, 3))
             {
                 SegmentLabelsFont = GetFontFromElement(element["SegmentLabelsFont"]);
@@ -322,7 +340,7 @@ namespace LiveSplit.UI.Components
         public XmlNode GetSettings(XmlDocument document)
         {
             var parent = document.CreateElement("Settings");
-            parent.AppendChild(ToElement(document, "Version", "1.3"));
+            parent.AppendChild(ToElement(document, "Version", "1.4"));
             parent.AppendChild(ToElement(document, "Height", Height));
             parent.AppendChild(ToElement(document, "Width", Width));
             parent.AppendChild(ToElement(document, "SegmentTimerSizeRatio", SegmentTimerSizeRatio));
@@ -349,6 +367,7 @@ namespace LiveSplit.UI.Components
             parent.AppendChild(ToElement(document, "Comparison", Comparison));
             parent.AppendChild(ToElement(document, "Comparison2", Comparison2));
             parent.AppendChild(ToElement(document, "HideComparison", HideComparison));
+            parent.AppendChild(ToElement(document, "TimingMethod", TimingMethod));
 
             return parent;
         }
@@ -496,5 +515,6 @@ namespace LiveSplit.UI.Components
             element.InnerText = value.ToString(CultureInfo.InvariantCulture);
             return element;
         }
+
     }
 }
